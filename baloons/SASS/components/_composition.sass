@@ -1,0 +1,42 @@
+.composition
+    position: relative
+    &__photo
+        width: 55%
+        box-shadow: $box-shadow
+        border-radius: .5rem
+        position: absolute
+        z-index: 10
+        transition: all .2s
+        outline-offset: 1rem
+        @include respond(tab-port)
+            width: 50%
+        &_n1
+            top: 0
+            left: 0rem
+            @include respond(tab-port)
+                top: 0
+                left: 4rem
+        &_n2
+            top: 2rem
+            right: 0rem
+            @include respond(tab-port)
+                top: 2rem
+                right: 4rem
+        &_n3
+            top: 13rem
+            left: 10rem
+            @include respond(tab-port)
+                top: 14rem
+                left: 10rem
+        &:hover
+            outline: 1rem solid $color-brown-light
+            transform: scale(1.1)
+            z-index: 20
+    &:hover &__photo:not(:hover)
+        transform: scale(.95)
+        
+        
+        
+
+
+
